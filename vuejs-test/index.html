@@ -7,7 +7,10 @@
         <title>Vue Test</title>
     </head>
     <body>
-        <div id="app">{{message}}</div>
+        <div id="app">
+            <h1>{{message}}</h1>
+            <button @click="clickMe">Click Me!</button>
+        </div>
 
         <script>
             const app = Vue.createApp({
@@ -15,6 +18,11 @@
                     return {
                         message: "Hello From Vue!",
                     };
+                },
+                methods: {
+                    clickMe() {
+                        console.log("Button Clicked!");
+                    },
                 },
             });
 
