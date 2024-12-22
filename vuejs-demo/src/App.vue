@@ -5,5 +5,5 @@ import Navbar from "./components/Navbar.vue";
 
 <template>
     <Navbar />
-    <Hero />
+    <Hero title="Test Title" subtitle="Test Subtitle" />
 </template>
