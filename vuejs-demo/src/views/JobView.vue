@@ -3,6 +3,7 @@ import { onMounted, reactive } from "vue";
 import { useRoute } from "vue-router";
 import PulseLoader from "vue-spinner/src/PulseLoader.vue";
 import axios from "axios";
+import BackButton from "@/components/BackButton.vue";
 
 const route = useRoute();
 
@@ -26,6 +27,7 @@ onMounted(async () => {
 </script>
 
 <template>
+    <BackButton />
     <section v-if="!state.isLoading" class="bg-green-50">
         <div class="container m-auto py-10 px-6">
             <div class="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
