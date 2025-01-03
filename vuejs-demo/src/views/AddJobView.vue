@@ -1,4 +1,20 @@
-<script setup></script>
+<script setup>
+import { reactive } from "vue";
+
+const form = reactive({
+    type: "Full-Time",
+    title: "",
+    description: "",
+    salary: "",
+    location: "",
+    company: {
+        name: "",
+        description: "",
+        contactEmail: "",
+        contactPhone: "",
+    },
+});
+</script>
 
 <template>
     <section class="bg-green-50">
@@ -9,7 +25,13 @@
 
                     <div class="mb-4">
                         <label for="type" class="block text-gray-700 font-bold mb-2">Job Type</label>
-                        <select id="type" name="type" class="border rounded w-full py-2 px-3" required>
+                        <select
+                            v-model="form.type"
+                            id="type"
+                            name="type"
+                            class="border rounded w-full py-2 px-3"
+                            required
+                        >
                             <option value="Full-Time">Full-Time</option>
                             <option value="Part-Time">Part-Time</option>
                             <option value="Remote">Remote</option>
@@ -21,6 +43,7 @@
                         <label class="block text-gray-700 font-bold mb-2">Job Listing Name</label>
                         <input
                             type="text"
+                            v-model="form.name"
                             id="name"
                             name="name"
                             class="border rounded w-full py-2 px-3 mb-2"
@@ -32,6 +55,7 @@
                         <label for="description" class="block text-gray-700 font-bold mb-2">Description</label>
                         <textarea
                             id="description"
+                            v-model="form.description"
                             name="description"
                             class="border rounded w-full py-2 px-3"
                             rows="4"
@@ -41,7 +65,13 @@
 
                     <div class="mb-4">
                         <label for="type" class="block text-gray-700 font-bold mb-2">Salary</label>
-                        <select id="salary" name="salary" class="border rounded w-full py-2 px-3" required>
+                        <select
+                            v-model="form.salary"
+                            id="salary"
+                            name="salary"
+                            class="border rounded w-full py-2 px-3"
+                            required
+                        >
                             <option value="Under $50K">under $50K</option>
                             <option value="$50K - $60K">$50 - $60K</option>
                             <option value="$60K - $70K">$60 - $70K</option>
@@ -60,6 +90,7 @@
                         <label class="block text-gray-700 font-bold mb-2"> Location </label>
                         <input
                             type="text"
+                            v-model="form.location"
                             id="location"
                             name="location"
                             class="border rounded w-full py-2 px-3 mb-2"
@@ -74,6 +105,7 @@
                         <label for="company" class="block text-gray-700 font-bold mb-2">Company Name</label>
                         <input
                             type="text"
+                            v-model="form.company.name"
                             id="company"
                             name="company"
                             class="border rounded w-full py-2 px-3"
@@ -87,6 +119,7 @@
                         >
                         <textarea
                             id="company_description"
+                            v-model="form.company.description"
                             name="company_description"
                             class="border rounded w-full py-2 px-3"
                             rows="4"
@@ -98,6 +131,7 @@
                         <label for="contact_email" class="block text-gray-700 font-bold mb-2">Contact Email</label>
                         <input
                             type="email"
+                            v-model="form.company.contactEmail"
                             id="contact_email"
                             name="contact_email"
                             class="border rounded w-full py-2 px-3"
@@ -109,6 +143,7 @@
                         <label for="contact_phone" class="block text-gray-700 font-bold mb-2">Contact Phone</label>
                         <input
                             type="tel"
+                            v-model="form.company.contactPhone"
                             id="contact_phone"
                             name="contact_phone"
                             class="border rounded w-full py-2 px-3"
