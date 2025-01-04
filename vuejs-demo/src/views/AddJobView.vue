@@ -1,5 +1,7 @@
 <script setup>
+import router from "@/router";
 import { reactive } from "vue";
+import axios from "axios";
 
 const form = reactive({
     type: "Full-Time",
@@ -16,7 +18,28 @@ const form = reactive({
 });
 
 const handleSubmit = async () => {
-    console.log(form.title);
+    const newJob = {
+        title: form.title,
+        type: form.type,
+        locaiton: form.location,
+        description: form.description,
+        salary: form.salary,
+        company: {
+            name: form.company.namne,
+            description: form.company.description,
+            contactEmail: form.company.contactEmail,
+            contactPhone: form.company.contactPhone,
+        },
+    };
+
+    try {
+        const response = await axios.post(`/api/jobs/`, newJob);
+        // @todo - show toast
+        router.push(`/jobs/${response.data.id}`);
+    } catch (error) {
+        console.error("Error fetching jobs.", error);
+        // @todo - show error toast
+    }
 };
 </script>
 
