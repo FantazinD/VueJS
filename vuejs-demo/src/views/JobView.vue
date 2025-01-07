@@ -4,9 +4,11 @@ import { useRoute, useRouter } from "vue-router";
 import PulseLoader from "vue-spinner/src/PulseLoader.vue";
 import axios from "axios";
 import BackButton from "@/components/BackButton.vue";
+import { useToast } from "vue-toastification";
 
 const route = useRoute();
 const router = useRouter();
+const toast = useToast();
 
 const jobId = route.params.id;
 
@@ -18,11 +20,11 @@ const state = reactive({
 const deleteJob = async () => {
     try {
         await axios.delete(`/api/jobs/${jobId}`);
+        toast.success("Job Deleted Successfully.");
         router.push("/jobs");
-        // toast for Job deletion success
     } catch (error) {
         console.error("Error deleting job", error);
-        // toast
+        toast.error("Error In Deleting a Job.");
     }
 };
 
