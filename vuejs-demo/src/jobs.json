@@ -98,19 +98,6 @@
       }
     },
     {
-      "id": "0166",
-      "title": "Seasoned VA",
-      "type": "Full-Time",
-      "locaiton": "Miami, FL",
-      "description": "hello",
-      "salary": "$100K - $125K",
-      "company": {
-        "description": "VA company",
-        "contactEmail": "hello.richard@gmail.com",
-        "contactPhone": "09231121233"
-      }
-    },
-    {
       "id": "617f",
       "title": "Seasoned VA",
       "type": "Full-Time",
@@ -121,71 +108,6 @@
         "description": "VA company",
         "contactEmail": "hello.richard@gmail.com",
         "contactPhone": "09231121233"
-      }
-    },
-    {
-      "id": "a801",
-      "title": "Seasoned VA",
-      "type": "Full-Time",
-      "locaiton": "Miami, FL",
-      "description": "hello",
-      "salary": "$100K - $125K",
-      "company": {
-        "description": "VA company",
-        "contactEmail": "hello.richard@gmail.com",
-        "contactPhone": "09231121233"
-      }
-    },
-    {
-      "id": "1ed5",
-      "title": "Seasoned VA",
-      "type": "Full-Time",
-      "locaiton": "Miami, FL",
-      "description": "hello",
-      "salary": "$100K - $125K",
-      "company": {
-        "description": "VA company",
-        "contactEmail": "hello.richard@gmail.com",
-        "contactPhone": "09231121233"
-      }
-    },
-    {
-      "id": "4c97",
-      "title": "Seasoned VA",
-      "type": "Full-Time",
-      "locaiton": "Miami, FL",
-      "description": "hello",
-      "salary": "$100K - $125K",
-      "company": {
-        "description": "VA company",
-        "contactEmail": "hello.richard@gmail.com",
-        "contactPhone": "09231121233"
-      }
-    },
-    {
-      "id": "d83f",
-      "title": "asd",
-      "type": "Full-Time",
-      "locaiton": "asd",
-      "description": "asd",
-      "salary": "$125K - $150K",
-      "company": {
-        "description": "asd",
-        "contactEmail": "asd@asd",
-        "contactPhone": "asd"
-      }
-    },
-    {
-      "id": "9f6c",
-      "title": "asd",
-      "type": "Remote",
-      "locaiton": "asd",
-      "description": "asd",
-      "salary": "$60K - $70K",
-      "company": {
-        "description": "asd",
-        "contactEmail": "asd@asd",
-        "contactPhone": "3123"
       }
     }
   ]
