@@ -1,10 +1,12 @@
 <script setup>
 import { onMounted, ref } from "vue";
+import { useToast } from "vue-toastification";
 
 const name = ref("John Doe");
 const status = ref("active");
 const tasks = ref(["Task One", "Task Two", "Task Three"]);
 const newTask = ref("");
+const toast = useToast();
 
 const toggleStatus = () => {
     if (status.value === "active") {
@@ -33,7 +35,7 @@ onMounted(async () => {
         const data = await response.json();
         tasks.value = data.map((task) => task.title);
     } catch (error) {
-        console.log("Error fetching tasks");
+        toast.error("Error Fetching Tasks.");
     }
 });
 </script>
