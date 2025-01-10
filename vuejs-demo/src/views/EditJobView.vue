@@ -34,7 +34,7 @@ const handleSubmit = async () => {
     const updatedJob = {
         title: form.title,
         type: form.type,
-        locaiton: form.location,
+        location: form.location,
         description: form.description,
         salary: form.salary,
         company: {
