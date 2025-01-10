@@ -38,7 +38,7 @@ const handleSubmit = async () => {
         description: form.description,
         salary: form.salary,
         company: {
-            name: form.company.namne,
+            name: form.company.name,
             description: form.company.description,
             contactEmail: form.company.contactEmail,
             contactPhone: form.company.contactPhone,
