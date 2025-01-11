@@ -10,6 +10,7 @@
         <div id="app">
             <h1>{{message}}</h1>
             <button @click="clickMe">Click Me!</button>
+            <button @click="clickMe">Alert Me!</button>
         </div>
 
         <script>
@@ -22,6 +23,9 @@
                 methods: {
                     clickMe() {
                         this.message = "Updated Message";
+                    },
+                    alertMe() {
+                        alert("This is an alert!");
                     },
                 },
             });
